@@ -13,7 +13,7 @@ while True:
             result = None
             continue
         
-    if wait_for_number == True:
+    if wait_for_number:
         operand = input("Введи число: ")
         try:
             operand = int(operand)
@@ -21,7 +21,7 @@ while True:
         except ValueError:
             continue
              
-    if wait_for_number == False and operator == None:
+    if not wait_for_number and not operator:
         operator = input("Введи '+' или '-' или '/' или '*' или '=': ")
         if operator == "=" or '+' or '-' or '/' or '*':
             if operator == "=":
